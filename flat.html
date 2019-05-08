@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS</title>
+  </head>
+  <body>
+    <script>
+      function flatten(arr) {
+        return arr.reduce(
+          (acc, val) =>
+            Array.isArray(val) ? acc.concat(flatten(val)) : acc.concat(val),
+          []
+        );
+      }
+      function con(arr) {
+        return [].concat(arr);
+      }
+      var test = [1, [5, 34], {}, [3, [4], 5], [6, "seven"]];
+      var te = [1, 2];
+      // var arra = con(test);
+      var arra = [];
+      var arra = arra.concat(test);
+      // alert("Hello " + arra);
+      console.log(arra);
+    </script>
+  </body>
+</html>
